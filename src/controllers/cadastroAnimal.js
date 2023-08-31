@@ -1,16 +1,18 @@
-function addAnimal(animal){
+function addAnimal(animal) {
     console.log("passou")
-    listaAnimal.push({nome: animal.nome, 
-        idade: animal.idade, 
+    listaAnimal.push({
+        nome: animal.nome,
+        idade: animal.idade,
         especie: animal.especie,
         sexo: animal.sexo,
         porte: animal.porte,
-        saude: animal.saude})
+        saude: animal.saude
+    })
     console.log(listaAnimal)
 }
 
 function retonarIdadeString(idade) {
-    
+
     if (idade != null) {
         idadeStr = idade.toString().split(".")
         if (idadeStr.length > 1)
@@ -22,17 +24,44 @@ function retonarIdadeString(idade) {
     return idade
 }
 
+function retornaTableAnimal() {
+    var tipoList = ["Nome", "Idade", "Espécie", "Sexo", "Porte", "Saúde"]
+    var html = "<table border='1|1'>";
+    html += "<tr>";
+    for (let i = 0; i < tipoList.length; i++) {
+        html += `<td>${tipoList[i]}</td>`;
+    }
+    html += "</tr>";
+    for (var i = 0; i < listaAnimal.length; i++) {
+        html += "<tr>";
+        html += `<td>${listaAnimal[i].nome}</td>`;
+        html += `<td>${listaAnimal[i].idade}</td>`;
+        html += `<td>${listaAnimal[i].especie}</td>`;
+        html += `<td>${listaAnimal[i].sexo}</td>`;
+        html += `<td>${listaAnimal[i].porte}</td>`;
+        html += `<td>${listaAnimal[i].saude}</td>`;
+        html += "</tr>";
+    }
+    html += "</table>";
+
+    return html;
+}
+
 const listaAnimal = [
-    {nome: "Miu", 
-    idade: '1.5', 
-    especie: "Gato",
-    sexo: "Feminino",
-    porte: "Pequeno",
-    saude: "Boa"}, 
-    {nome: "Minerva", 
-    idade: '2.5', 
-    especie: "Gato",
-    sexo: "Feminino",
-    porte: "Pequeno",
-    saude: "Boa"}, 
+    {
+        nome: "Miu",
+        idade: '1.5',
+        especie: "Gato",
+        sexo: "Feminino",
+        porte: "Pequeno",
+        saude: "Boa"
+    },
+    {
+        nome: "Minerva",
+        idade: '2.5',
+        especie: "Gato",
+        sexo: "Feminino",
+        porte: "Pequeno",
+        saude: "Boa"
+    },
 ]
