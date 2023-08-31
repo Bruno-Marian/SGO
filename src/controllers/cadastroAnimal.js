@@ -12,14 +12,11 @@ function addAnimal(animal) {
 }
 
 function retonarIdadeString(idade) {
-
-    if (idade != null) {
-        idadeStr = idade.toString().split(".")
-        if (idadeStr.length > 1)
-            return `${idadeStr[0]} ano(s) e ${idadeStr[1]} mes(es)`
-        else
-            return `${idadeStr[0]} ano(s)`
-    }
+    idadeStr = idade.toString().split(".")
+    if (idadeStr.length > 1)
+        return `${idadeStr[0]} ano(s) e ${idadeStr[1]} mês(es)`
+    else if (idadeStr != "")
+        return `${idadeStr[0]} ano(s)`
 
     return idade
 }
