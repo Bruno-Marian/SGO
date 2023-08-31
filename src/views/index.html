@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../controllers/cadastroAnimal.js"></script>
     <title>cadastroAnimal</title>
 </head>
 <body>
     <label for="">Nome:</label>
-    <input type="text" name="nome" id="animal.nome">
+    <input type="text" name="nome" id="nome">
     <label for="">Idade:</label>
-    <input type="text" name="idade" id="animal.idade"> 
+    <input type="text" name="idade" id="idade"> 
     <label for="">Espécie</label> 
-    <input type="text" name="Especie" id="animal.especie"> <br>
+    <input type="text" name="especie" id="especie"> <br>
     <label for="">Sexo</label>
-    <input type="text" name="sexo" id="animal.sexo">
+    <input type="text" name="sexo" id="sexo">
     <label for="">Porte</label> 
-    <input type="text" name="Porte" id="animal.porte">
+    <input type="text" name="porte" id="porte">
     <label for="">Saúde</label>
-    <input type="text" name="saude" id="animal.saude"> <br>
-    <button type="button" onclick="addNewAnimal(animal)">Gravar</button>
+    <input type="text" name="saude" id="saude"> <br>
+    <button type="button" onclick="addNewAnimal(true)">Gravar</button>
 
     <div id="box">
 
@@ -26,15 +27,23 @@
     <script>
         addNewAnimal()
         
-        function addNewAnimal(animal){
-            if (animal){
+        function addNewAnimal(isAnimal){
+            if (isAnimal){
+                const animal = {
+                    "nome": nome.value,
+                    "idade": idade.value,
+                    "especie": especie.value,
+                    "sexo": sexo.value,
+                    "porte": porte.value,
+                    "saude": saude.value
+                }
                 addAnimal(animal)
             }
             var html = "<table border='1|1'>";
             for (var i = 0; i < listaAnimal.length; i++) {
                 html+="<tr>";
                 html+="<td>"+listaAnimal[i].nome+"</td>";
-                html+="<td>"+listaAnimal[i].tipo+"</td>";
+                html+="<td>"+listaAnimal[i].especie+"</td>";
             
                 html+="</tr>";
             }
