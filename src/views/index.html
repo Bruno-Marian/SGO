@@ -7,18 +7,34 @@
     <title>cadastroAnimal</title>
 </head>
 <body>
-    <label for="">Nome:</label>
-    <input type="text" name="nome" id="nome">
-    <label for="">Idade:</label>
-    <input type="text" name="idade" id="idade"> 
-    <label for="">Espécie</label> 
-    <input type="text" name="especie" id="especie"> <br>
-    <label for="">Sexo</label>
-    <input type="text" name="sexo" id="sexo">
-    <label for="">Porte</label> 
-    <input type="text" name="porte" id="porte">
-    <label for="">Saúde</label>
-    <input type="text" name="saude" id="saude"> <br>
+    <label for="">Nome:</label> <br>
+    <input type="text" name="nome" id="nome"> <br>
+    <label for="">Idade:</label> <br>
+    <input type="number" name="idade" id="idade"> 
+    <p>
+        <label for="">Espécie:</label> <br>
+        <input type="radio" name="especie" id="gato">
+        <label for="">Gato</label>
+        <input type="radio" name="especie" id="cachorro">
+        <label for="">Cachorro</label>
+    </p>
+    <p>
+        <label for="">Sexo:</label> <br>
+        <input type="radio" name="sexo" id="femia">
+        <label for="">Femia</label>
+        <input type="radio" name="sexo" id="macho">        
+        <label for="">Macho</label>
+    </p>
+    <p>
+        <label for="">Porte:</label> <br>
+        <select name="porte" id="porte">
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+        </select>
+    </p>
+    <label for="">Saúde:</label> <br>
+    <textarea name="saude" id="saude" cols="30" rows="10"></textarea> <br>
     <button type="button" onclick="addNewAnimal(true)">Gravar</button>
 
     <div id="box">
