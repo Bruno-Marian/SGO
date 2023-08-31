@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./../controllers/cadastroAnimal.js"></script>
-    <title>Document</title>
+    <title>cadastroAnimal</title>
 </head>
 <body>
+    <label for="">Nome:</label>
+    <input type="text" name="nome" id="animal.nome">
+    <label for="">Idade:</label>
+    <input type="text" name="idade" id="animal.idade"> 
+    <label for="">Espécie</label> 
+    <input type="text" name="Especie" id="animal.especie"> <br>
+    <label for="">Sexo</label>
+    <input type="text" name="sexo" id="animal.sexo">
+    <label for="">Porte</label> 
+    <input type="text" name="Porte" id="animal.porte">
+    <label for="">Saúde</label>
+    <input type="text" name="saude" id="animal.saude"> <br>
+    <button type="button" onclick="addNewAnimal(animal)">Gravar</button>
+
     <div id="box">
 
     </div>
-    <button onclick="addNewAnimal({nome: 'Tigresa', tipo: 'Gato'})">Texto</button>
     <script>
         addNewAnimal()
         
