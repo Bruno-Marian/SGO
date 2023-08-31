@@ -51,7 +51,7 @@ const listaAnimal = [
         especie: "Gato",
         sexo: "Feminino",
         porte: "Pequeno",
-        saude: "Boa"
+        saude: "Boa, mais revoltado com a Minerva."
     },
     {
         nome: "Minerva",
@@ -59,6 +59,14 @@ const listaAnimal = [
         especie: "Gato",
         sexo: "Feminino",
         porte: "Pequeno",
-        saude: "Boa"
+        saude: "Boa, mais com medo da sombra."
+    },
+    {
+        nome: "Tigresa",
+        idade: '2.5',
+        especie: "Gato",
+        sexo: "Feminino",
+        porte: "Pequeno",
+        saude: "Boa, mas acima do peso."
     },
 ]
