@@ -9,6 +9,19 @@ function addAnimal(animal){
     console.log(listaAnimal)
 }
 
+function retonarIdadeString(idade) {
+    
+    if (idade != null) {
+        idadeStr = idade.toString().split(".")
+        if (idadeStr.length > 1)
+            return `${idadeStr[0]} ano(s) e ${idadeStr[1]} mes(es)`
+        else
+            return `${idadeStr[0]} ano(s)`
+    }
+
+    return idade
+}
+
 const listaAnimal = [
     {nome: "Miu", 
     idade: '1.5', 

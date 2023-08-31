@@ -13,24 +13,24 @@
     <input type="number" name="idade" id="idade"> 
     <p>
         <label for="">Espécie:</label> <br>
-        <input type="radio" name="especie" id="gato">
+        <input type="radio" name="especie" id="gato" value="Gato" checked>
         <label for="">Gato</label>
-        <input type="radio" name="especie" id="cachorro">
+        <input type="radio" name="especie" id="cachorro" value="Cachorro">
         <label for="">Cachorro</label>
     </p>
     <p>
         <label for="">Sexo:</label> <br>
-        <input type="radio" name="sexo" id="femia">
-        <label for="">Femia</label>
-        <input type="radio" name="sexo" id="macho">        
+        <input type="radio" name="sexo" id="femea" value="Fêmea" checked>
+        <label for="">Fêmea</label>
+        <input type="radio" name="sexo" id="macho" value="Macho">        
         <label for="">Macho</label>
     </p>
     <p>
         <label for="">Porte:</label> <br>
         <select name="porte" id="porte">
-            <option value="pequeno">Pequeno</option>
-            <option value="medio">Médio</option>
-            <option value="grande">Grande</option>
+            <option value="Pequeno">Pequeno</option>
+            <option value="Médio">Médio</option>
+            <option value="Grande">Grande</option>
         </select>
     </p>
     <label for="">Saúde:</label> <br>
@@ -47,9 +47,9 @@
             if (isAnimal){
                 const animal = {
                     "nome": nome.value,
-                    "idade": idade.value,
-                    "especie": especie.value,
-                    "sexo": sexo.value,
+                    "idade": retonarIdadeString(idade.value),
+                    "especie": document.querySelector("input[type='radio'][name=especie]:checked").value,
+                    "sexo": document.querySelector("input[type='radio'][name=sexo]:checked").value,
                     "porte": porte.value,
                     "saude": saude.value
                 }
