@@ -17,8 +17,8 @@
             <input type="text" name="nome" id="nome">
             <label for="">Idade:</label>
             <input type="number" name="idade" id="idade">
-            <label for="">Porte:</label> 
-            <select name="porte" id="porte"> 
+            <label for="">Porte:</label>
+            <select name="porte" id="porte">
                 <option value="Pequeno">Pequeno</option>
                 <option value="Médio">Médio</option>
                 <option value="Grande">Grande</option>
@@ -45,8 +45,10 @@
             <div><button type="button" onclick="addNewAnimal(true)">Gravar</button></div>
         </fieldset>
         <!--Tabela de informações-->
+        <h3>Pets cadastrados</h3>
         <div id="box"></div>
     </div>
+
     <script>
         //Busca Memória Array
         addNewAnimal()
@@ -67,6 +69,7 @@
             document.getElementById("box").innerHTML = retornaTableAnimal();
         }
     </script>
+
 </body>
 
 </html>
