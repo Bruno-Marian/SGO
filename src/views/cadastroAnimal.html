@@ -13,34 +13,36 @@
     <div>
         <fieldset>
             <Legend>Cadastro de Pet para adoção:</Legend>
-            <label for="">Nome:</label>
-            <input type="text" name="nome" id="nome">
-            <label for="">Idade:</label>
-            <input type="number" name="idade" id="idade">
-            <label for="">Porte:</label>
-            <select name="porte" id="porte">
-                <option value="Pequeno">Pequeno</option>
-                <option value="Médio">Médio</option>
-                <option value="Grande">Grande</option>
-            </select>
-            <fieldset>
+            <div>
+                <label for="">Nome:</label>
+                <input type="text" name="nome" id="nome">
+                <label for="">Idade:</label>
+                <input type="number" name="idade" id="idade">
+                <label for="">Porte:</label>
+                <select name="porte" id="porte">
+                    <option value="Pequeno">Pequeno</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Grande">Grande</option>
+                </select>
+            </div>
+            <div>
                 <legend>Espécie:</legend>
                 <input type="radio" name="especie" id="gato" value="Gato" checked>
                 <label for="">Gato</label>
                 <input type="radio" name="especie" id="cachorro" value="Cachorro">
                 <label for="">Cachorro</label>
-            </fieldset>
-            <fieldset>
+            </div>
+            <div>
                 <legend>Sexo:</legend>
                 <input type="radio" name="sexo" id="femea" value="Fêmea" checked>
                 <label for="">Fêmea</label>
                 <input type="radio" name="sexo" id="macho" value="Macho">
                 <label for="">Macho</label>
-            </fieldset>
-            <fieldset>
+            </div>
+            <div>
                 <legend>Saúde:</legend>
                 <textarea name="saude" id="saude" cols="70" rows="3" maxlength="180"></textarea>
-            </fieldset>
+            </div>
             <!--Botão Gravar-->
             <div><button type="button" onclick="addNewAnimal(true)">Gravar</button></div>
         </fieldset>
