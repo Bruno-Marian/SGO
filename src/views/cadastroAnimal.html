@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./../controllers/cadastroAnimal.js"></script>
+    <link rel="stylesheet" href="./../styles/cadastroAnimal.css">
     <title>Cadastro de Pet</title>
 </head>
 
@@ -12,39 +13,49 @@
     <!--Campos de cadastro de pet-->
     <div>
         <fieldset>
-            <Legend>Cadastro de Pet para adoção:</Legend>
-            <div>
-                <label for="">Nome:</label>
-                <input type="text" name="nome" id="nome">
-                <label for="">Idade:</label>
-                <input type="number" name="idade" id="idade">
-                <label for="">Porte:</label>
-                <select name="porte" id="porte">
-                    <option value="Pequeno">Pequeno</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Grande">Grande</option>
-                </select>
-            </div>
-            <div>
-                <legend>Espécie:</legend>
-                <input type="radio" name="especie" id="gato" value="Gato" checked>
-                <label for="">Gato</label>
-                <input type="radio" name="especie" id="cachorro" value="Cachorro">
-                <label for="">Cachorro</label>
-            </div>
-            <div>
-                <legend>Sexo:</legend>
-                <input type="radio" name="sexo" id="femea" value="Fêmea" checked>
-                <label for="">Fêmea</label>
-                <input type="radio" name="sexo" id="macho" value="Macho">
-                <label for="">Macho</label>
-            </div>
-            <div>
-                <legend>Saúde:</legend>
-                <textarea name="saude" id="saude" cols="70" rows="3" maxlength="180"></textarea>
+            <Legend class="titulo">Cadastro de pet para adoção</Legend>
+            <div class="alinhementoHorizontal">
+                <div class="coluna">
+                    <div class="nomePet espacamento">
+                        <label for="">Nome:</label>
+                        <input type="text" name="nome" id="nome" class="campoPersonalizado">
+                    </div>
+                    <div class="idadePet espacamento">
+                        <label for="">Idade:</label>
+                        <input type="number" name="idade" id="idade" class="campoPersonalizado">
+                    </div>
+                    <div class="portePet espacamento">
+                        <label for="">Porte:</label>
+                        <select name="porte" id="porte" class="campoPersonalizado">
+                            <option value="Pequeno">Pequeno</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Grande">Grande</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="saudePet coluna espacamento">
+                    <legend>Saúde:</legend>
+                    <textarea name="saude" id="saude" cols="70" rows="3" maxlength="180" class="campoPersonalizado"></textarea>
+                    <div class="alinhementoHorizontal">
+                        <div class="especiePet espacamento coluna">
+                            <legend>Espécie:</legend>
+                            <input type="radio" name="especie" id="gato" value="Gato" checked>
+                            <label for="">Gato</label>
+                            <input type="radio" name="especie" id="cachorro" value="Cachorro">
+                            <label for="">Cachorro</label>
+                        </div>
+                        <div class="sexoPet espacamento coluna">
+                            <legend>Sexo:</legend>
+                            <input type="radio" name="sexo" id="femea" value="Fêmea" checked>
+                            <label for="">Fêmea</label>
+                            <input type="radio" name="sexo" id="macho" value="Macho">
+                            <label for="">Macho</label>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--Botão Gravar-->
-            <div><button type="button" onclick="addNewAnimal(true)">Gravar</button></div>
+            <div class="espacamento"><button type="button" onclick="addNewAnimal(true)" class="botaoGravar">Gravar</button></div>
         </fieldset>
         <!--Tabela de informações-->
         <h3>Pets cadastrados</h3>

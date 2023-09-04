@@ -26,7 +26,7 @@ function retornaTableAnimal() {
     var html = "<table border='1|1'>";
     html += "<tr>";
     for (let i = 0; i < tipoList.length; i++) {
-        html += `<td>${tipoList[i]}</td>`;
+        html += `<th>${tipoList[i]}</th>`;
     }
     html += "</tr>";
     for (var i = 0; i < listaAnimal.length; i++) {
