@@ -1,0 +1,59 @@
+.mainContent{
+    margin-left: 50px;
+}
+
+body {
+    background-color: #dfffcc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+object {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+ }
+
+#mySidenav a {
+    position: absolute;
+    left: -130px; 
+    transition: 0.3s;
+    padding: 15px;
+    width: 140px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    color: white; 
+    border-radius: 0 5px 5px 0; 
+  }
+  
+  #mySidenav a:hover {
+    left: 0; 
+  }
+  
+  #inicio {
+    top: 20px;
+    background-color: #467a39;
+  }
+  
+  #animal {
+    top: 80px;
+    background-color: #467a39;
+  }
+  
+  #adocao {
+    top: 140px;
+    background-color: #467a39; 
+  }
+  
+  #funcionario {
+    top: 200px;
+    background-color: #467a39;
+  }
+
+  #sair {
+    top: 260px;
+    background-color: #467a39;
+  }
