@@ -12,7 +12,7 @@
         
         </div>
         <a onclick="setaPage('home.html')" id="inicio">Inicio</a>
-        <a onclick="setaPage('cadastroAnimal.html')" id="animal">Animal</a>
+        <a onclick="setaPage('animal.html')" id="animal">Animal</a>
         <a onclick="setaPage()" id="adocao">Adoção</a>
         <a onclick="setaPage()" id="funcionario">Funcionário</a>
         <a onclick="setaPage('login.html')" id="sair">Sair</a>
@@ -20,7 +20,7 @@
         
     </div>
     <script>
-        setaPage("cadastroAnimal.html")
+        setaPage("animal.html")
 
         function setaPage(page){
             document.getElementById('main').innerHTML += `<object type="text/html" data="${page}"></object>`;
