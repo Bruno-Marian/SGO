@@ -15,15 +15,26 @@
         <a onclick="setaPage('animal.html')" id="animal">Animal</a>
         <a onclick="setaPage()" id="adocao">Adoção</a>
         <a onclick="setaPage()" id="funcionario">Funcionário</a>
-        <a onclick="setaPage('login.html')" id="sair">Sair</a>
+        <a onclick="sair()" id="sair">Sair</a>
 
         
     </div>
     <script>
-        setaPage("animal.html")
+        const pageConst = localStorage.getItem("page");
+        if (pageConst == null) {
+            setaPage("home.html")
+        }else{
+            setaPage(pageConst)
+        }
 
         function setaPage(page){
-            document.getElementById('main').innerHTML += `<object type="text/html" data="${page}"></object>`;
+            localStorage.setItem("page", page)
+            document.getElementById('main').innerHTML = `<object type="text/html" data="${page}"></object>`;
+        }
+
+        function sair() {
+            window.location.href = "login.html";
+            localStorage.setItem("login", null);
         }
         
     </script>

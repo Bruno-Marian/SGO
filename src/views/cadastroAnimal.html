@@ -57,29 +57,14 @@
             <!--Botão Gravar-->
             <div class="espacamento"><button type="button" onclick="addNewAnimal(true)" class="botaoGravar">Gravar</button></div>
         </fieldset>
-        <!--Tabela de informações-->
-        <h3>Pets cadastrados</h3>
-        <div id="box"></div>
     </div>
 
     <script>
-        //Busca Memória Array
-        addNewAnimal()
         //Função para adicinar um novo animal
-        function addNewAnimal(isAnimal) {
-            if (isAnimal) {
-                const animal = {
-                    "nome": nome.value,
-                    "idade": retonarIdadeString(idade.value),
-                    "especie": document.querySelector("input[type='radio'][name=especie]:checked").value,
-                    "sexo": document.querySelector("input[type='radio'][name=sexo]:checked").value,
-                    "porte": porte.value,
-                    "saude": saude.value
-                }
-                addAnimal(animal)
-            }
-            //Retorna nova informação salva na memória
-            document.getElementById("box").innerHTML = retornaTableAnimal();
+        let animalEdit = localStorage.getItem("animalEdit");
+        if (animalEdit != "null") {
+            loadAnimal(animalEdit)
+            localStorage.setItem("animalEdit", null);
         }
     </script>
 

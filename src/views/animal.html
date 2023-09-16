@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../styles/style.css">
+    <script src="./../controllers/listAnimal.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <button>Cadastrar</button>
-    <button>Remover</button>
-    <button>Listar</button>
+    <div>
+        <fieldset>
+            <legend class="titulo">Menu animal</legend>
+            <div class="menuDiv">
+                <button class="botaoGravar" onclick="cadastraClick()"> + Cadastrar</button>
+            </div>
+            <h3>Pets cadastrados</h3>
+            <div id="box"></div>
+        </fieldset>
+    </div>
+
+    <script>
+        listAnimal()
+
+        function listAnimal() {
+            //Retorna nova informação salva na memória
+            document.getElementById("box").innerHTML = retornaTableAnimal();
+        }       
+    </script>
 </body>
 </html>
