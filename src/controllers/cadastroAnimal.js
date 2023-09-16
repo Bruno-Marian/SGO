@@ -32,6 +32,8 @@ function addAnimal(animal) {
         })
     }
     localStorage.setItem("animalList", JSON.stringify(listaAnimal))
+
+    return true;
 }
 
 retornaAnimal()

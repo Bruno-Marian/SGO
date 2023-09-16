@@ -12,12 +12,23 @@
         <fieldset>
             <legend>Login</legend>
             <label for="">Usuário:</label>
-            <input type="text" name="usuario" value="usuario"> <br>
+            <input type="text" name="usuario" id="usuario" value="usuario"> <br>
             <label for="">Senha:</label>
-            <input type="password" name="senha" value="senha"> <br>
-            <button>Entrar</button>
+            <input type="password" name="senha" id="senha" value="senha"> <br>
+            <button onclick="logar()">Entrar</button>
             <button>cadastre-se aqui</button>
         </fieldset>
     </div>
+
+    <script>
+        function logar() {
+            let user = {"user": usuario.value, "password": senha.value, "login": Date().toLocaleString()};
+
+            if(validaLogar(user)){
+                localStorage.setItem("login", JSON.stringify(user));
+                window.location.href = "master.html";
+            }
+        }
+    </script>
 </body>
 </html>
