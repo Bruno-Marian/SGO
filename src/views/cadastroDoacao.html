@@ -4,41 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../styles/style.css">
-    <title>Cadastro Usuário</title>
+    <title>Cadastro Doação</title>
 </head>
 <body>
-    <!--Campos de cadastro de usuário-->
-    <div>
+    <!--Campos de cadastro de doação-->
+    <div>    
         <fieldset>
-            <legend class="titulo">Cadastro de Funcionário</legend>
+            <legend class="titulo">Cadastro de animais adotados</legend>
             <div class="alinhementoHorizontal">
                 <div class="coluna">
+                    <div>
+                        <label for="">Animal doado:</label>
+                        <select>
+                            <option></option>
+                        </select>
+                    </div>
+                    <label for="">Pessoa que adotou:</label>
                     <div>
                         <label for="">Nome:</label>
                         <input type="text" name="nome" id="nome" class="campoPersonalizado">
                     </div>
                     <div>
-                        <label for="">Idade:</label>
+                        <label for="">Telefone:</label>
                         <input type="number" name="idade" id="idade" class="campoPersonalizado">
-                    </div>
-                    <div>
-                        <label for="">Função</label>
-                        <select name="funcao" id="funcao" class="campoPersonalizado">
-                            <option value="administrador">Administrador</option>
-                            <option value="veterinario">Veterinário</option>
-                        </select>
                     </div>
                     <div>
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email">   
-                    </div>
-                    <div>
-                        <label for="email">Confirmar Email:</label>
-                        <input type="email" id="conEmail" name="conEmail">   
-                    </div>
-                    <div>
-                        <label for="email">Senha:</label>
-                        <input type="password" id="senha" name="senha">   
                     </div>
                     <div>
                         <label for="">Indereço:</label>
@@ -57,16 +49,15 @@
                         <label for="">País:</label>
                         <input type="text" name="pais" id="pais" class="campoPersonalizado">
                     </div>
-                    <!--poder ativar e desativar usuário-->
                 </div>
             </div>
             <!--Botão Gravar-->
             <div class="espacamento"><button type="button" onclick="" class="botaoGravar">Gravar</button></div>
         </fieldset>
     </div>
-
+    
     <script>
-        
-    </script>
+            
+    </script>  
 </body>
 </html>
