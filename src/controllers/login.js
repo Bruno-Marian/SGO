@@ -3,6 +3,6 @@ function validaLogar(usuario) {
         return true;
     }
     else {
-        alert("Usuário e/ou senha inválido(s)!")
+        document.getElementById("mensagemErro").style.display = "block"
     }
 }

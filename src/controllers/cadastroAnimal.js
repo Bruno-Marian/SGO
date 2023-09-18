@@ -1,5 +1,4 @@
 function addAnimal(animal) {
-    //Valida as informações do animal
     if (!validateAnimal(animal)) return false;
 
     let listaAnimal = retornaAnimal();
@@ -25,7 +24,7 @@ function addAnimal(animal) {
             nome: animal.nome,
             idade: animal.idade,
             especie: animal.especie,
-            sexo: animal.sexo,
+            genero: animal.genero,
             porte: animal.porte,
             saude: animal.saude,
             disponivel: animal.disponivel
@@ -64,7 +63,7 @@ function addNewAnimal(isAnimal) {
             "nome": nome.value,
             "idade": idade.value,
             "especie": document.querySelector("input[type='radio'][name=especie]:checked").value,
-            "sexo": document.querySelector("input[type='radio'][name=sexo]:checked").value,
+            "genero": document.querySelector("input[type='radio'][name=genero]:checked").value,
             "porte": porte.value,
             "saude": saude.value,
             "disponivel": true,
@@ -98,19 +97,17 @@ function loadAnimal(id) {
             document.getElementById("cachorro").checked = true
         }
 
-        if (animal.sexo == "Macho"){
+        if (animal.genero == "Macho"){
             document.getElementById("macho").checked = true
         }else{
             document.getElementById("femea").checked = true
         }
     }
 }
-
 function validateAnimal(animal) {
-    obrigatorioList = ["nome", "idade"]
+    obrigatorioList = ["nome", "idade", "especie", "porte", "genero", "saude"]
     for (var i in obrigatorioList){
         if (animal[obrigatorioList[i]] == "" || animal[obrigatorioList[i]] == null){
-            alert(`Campo obrigatório ${obrigatorioList[i]} não informado`)
             return false;
         }
     }
