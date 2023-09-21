@@ -29,20 +29,28 @@ object {
 }
 
 table {
-    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
     margin: auto;
     font-size: 18px;
-    background-color: white;
+    width: 100%;
+    border: 1px solid rgb(142, 188, 228);
+    background-color: rgb(142, 188, 228);
 }
 
 table th {
-    background-color: rgb(93, 168, 235);
-    font-weight: 400;
+    font-weight: 600;
     text-align: center;
+    padding: 16px;
 }
 
 table td {
     font-weight: 400;
     text-align: center;
-    padding: 5px;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+    border: 1px solid white;
 }
